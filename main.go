@@ -38,7 +38,7 @@ func main() {
 			datastore.InsertRecord(rec)
 			// send each line to memory package
 		}
-		datastore.PrintStore()
+		// datastore.PrintStore()
 		if err := ctx.Err(); err != nil {
 			log.Fatal(err)
 		}
@@ -47,9 +47,10 @@ func main() {
 	}
 
 	// <replaceme>
-	log.Println("you're using our mock datastore, you'll need to implement your own copy as well!")
-	ds = datastore.Mock{}
+	//log.Println("you're using our mock datastore, you'll need to implement your own copy as well!")
+	//ds = datastore.Mock{}
 	// </replace>
+	ds = datastore.Store
 
 	if ds == nil {
 		log.Fatal("you need to implement the serve.Datastore interface to run the server")
