@@ -2,7 +2,7 @@
 
 ## Part 1
 
-This part completes the verifaction step that can be run as follows.
+This part completes the verification step that can be run as follows.
 
 Generate files first:
 
