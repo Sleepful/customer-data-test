@@ -1,4 +1,4 @@
-# Customer Challenge README
+# Customer.io Challenge README
 
 This challenge is designed to test both your Frontend and Backend abilities, and is broken into two sections. You should aim to spend roughly an equal amount of time on each, so please read through the requirements for both sections, as well as our evaluation criteria before starting on the assignment. 
 
