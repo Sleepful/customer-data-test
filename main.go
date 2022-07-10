@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"fmt"
+	_ "fmt"
 	"log"
 	"os"
 	"os/signal"
@@ -25,7 +25,6 @@ func main() {
 
 	var ds serve.Datastore
 
-
 	var fileName = "data/messages.1.data"
 	f, err := os.Open(fileName)
 	if err != nil {
@@ -35,8 +34,11 @@ func main() {
 	if ch, err := stream.Process(ctx, f); err == nil {
 
 		for rec := range ch {
-			fmt.Println(rec)
+			// datastore.ProcessInputEvent(rec)
+			datastore.InsertRecord(rec)
+			// send each line to memory package
 		}
+		datastore.PrintStore()
 		if err := ctx.Err(); err != nil {
 			log.Fatal(err)
 		}
