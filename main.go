@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	_ "fmt"
 	"log"
 	"os"
 	"os/signal"
@@ -24,11 +25,20 @@ func main() {
 
 	var ds serve.Datastore
 
-	if ch, err := stream.Process(ctx, nil); err == nil {
+	var fileName = "data/messages.1.data"
+	f, err := os.Open(fileName)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if ch, err := stream.Process(ctx, f); err == nil {
 
 		for rec := range ch {
-			_ = rec
+			// datastore.ProcessInputEvent(rec)
+			datastore.InsertRecord(rec)
+			// send each line to memory package
 		}
+		// datastore.PrintStore()
 		if err := ctx.Err(); err != nil {
 			log.Fatal(err)
 		}
@@ -37,9 +47,10 @@ func main() {
 	}
 
 	// <replaceme>
-	log.Println("you're using our mock datastore, you'll need to implement your own copy as well!")
-	ds = datastore.Mock{}
+	//log.Println("you're using our mock datastore, you'll need to implement your own copy as well!")
+	//ds = datastore.Mock{}
 	// </replace>
+	ds = datastore.Store
 
 	if ds == nil {
 		log.Fatal("you need to implement the serve.Datastore interface to run the server")

@@ -17,7 +17,7 @@ type Customer struct {
 	ID          int               `json:"id"`
 	Attributes  map[string]string `json:"attributes"`
 	Events      map[string]int    `json:"events"`
-	LastUpdated int               `json:"last_updated"`
+	LastUpdated int64             `json:"last_updated"`
 }
 
 type Datastore interface {
