@@ -22,7 +22,6 @@ export default class CustomersController extends Controller {
     const perPage = model.meta.per_page;
     const totalRecords = model.meta.total;
     const totalPages = totalRecords / perPage;
-    console.log({ totalPages });
     return totalPages;
   }
 }
