@@ -21,3 +21,21 @@ go run verify/main.go --verify-file ./data/verify.2.csv
 By default `/main.go` uses `var fileName = "data/messages.1.data"`, change this line to verify against a different `messages` file.
 
 This part also includes all the back-end code necessary for the endpoints.
+
+## Part 2
+
+Completes the following without any CSS styling:
+
+- Displays the list of users with pagination
+- Displays attributes for a user
+- Uses EmberJS utilities for doing the operations mentioned above
+
+to run this do:
+
+```
+cd ./ember-quickstart
+npm install
+ember serve
+```
+
+and then visit `http://localhost:4200/customers` on your browser

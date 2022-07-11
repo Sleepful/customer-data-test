@@ -1,0 +1,12 @@
+{{page-title 'Customer'}}
+<h2>List of Properties</h2>
+
+<ul>
+  {{#each @model as |prop|}}
+  ---
+    <li>name: {{prop.[0]}}</li>
+    <li>value: {{prop.[1]}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
