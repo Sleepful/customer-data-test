@@ -5,6 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'ember-quickstart',
     environment,
     rootURL: '/',
+    //rootURL: 'http://localhost:1323/',
     locationType: 'history',
     EmberENV: {
       FEATURES: {

@@ -1,0 +1,28 @@
+{{page-title 'Customers'}}
+<h2>List of Customers</h2>
+<ul>
+  {{#each @model as |customer|}}
+    ---
+    <LinkTo @route='customer' @model={{customer.id}}>
+      <li>id: {{customer.id}}</li>
+      <li>name: {{customer.fullName}}</li>
+    </LinkTo>
+  {{/each}}
+</ul>
+---
+<br />
+Current page:
+{{this.page}}
+<br />
+Total pages:
+{{this.totalPages}}
+<br />
+---
+
+<br />
+<LinkTo @route='customers' @query={{hash page=this.prev}}>Previous</LinkTo>
+
+|
+<LinkTo @route='customers' @query={{hash page=this.next}}>Next</LinkTo>
+
+{{outlet}}
