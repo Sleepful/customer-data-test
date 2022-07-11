@@ -39,3 +39,10 @@ ember serve
 ```
 
 and then visit `http://localhost:4200/customers` on your browser
+
+## Missing
+
+This second part is missing a couple of things, namely:
+
+- styling
+- edit/delete/create for records
