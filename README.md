@@ -46,3 +46,5 @@ This second part is missing a couple of things, namely:
 
 - styling
 - edit/delete/create for records
+
+Side note: I might add styling right before the interview if that is fine.
