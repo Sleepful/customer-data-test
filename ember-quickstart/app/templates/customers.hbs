@@ -1,11 +1,14 @@
 {{page-title 'Customers'}}
 <h2 class='p-2 text-xl'>List of Customers</h2>
-<ul class='p-2 flex flex-row flex-wrap gap-1' role='list of users'>
+<ul
+  class='p-2 flex flex-row flex-wrap gap-1 min-h-[360px]'
+  role='list of users'
+>
   {{#each @model as |customer|}}
     <LinkTo
       @route='customer'
       @model={{customer.id}}
-      class='p-4 rounded-br-lg border-2 border-slate-400 hover:border-orange-400'
+      class='p-4 rounded-br-lg border-2 border-slate-400 hover:border-orange-400 grow'
     >
       <li>
         {{customer.id}}:
