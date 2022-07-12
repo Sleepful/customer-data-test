@@ -38,7 +38,7 @@ npm install
 ember serve
 ```
 
-and then visit `http://localhost:4200/customers` on your browser
+and then visit `http://localhost:4200` on your browser
 
 ## Missing
 
