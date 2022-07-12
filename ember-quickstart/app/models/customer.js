@@ -5,7 +5,7 @@ export default class CustomerModel extends Model {
   //@attr id;
   @attr attributes;
   @attr events;
-  @attr lastUpdated;
+  @attr last_updated;
   get fullName() {
     return `${this.attributes?.first_name} ${this.attributes?.last_name}`;
   }

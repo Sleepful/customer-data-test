@@ -24,7 +24,7 @@ This part also includes all the back-end code necessary for the endpoints.
 
 ## Part 2
 
-Completes the following without any CSS styling:
+Completes the following with TailwindCSS styling:
 
 - Displays the list of users with pagination
 - Displays attributes for a user
@@ -38,13 +38,10 @@ npm install
 ember serve
 ```
 
-and then visit `http://localhost:4200/customers` on your browser
+and then visit `http://localhost:4200` on your browser
 
 ## Missing
 
 This second part is missing a couple of things, namely:
 
-- styling
 - edit/delete/create for records
-
-Side note: I might add styling right before the interview if that is fine.

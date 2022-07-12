@@ -6,6 +6,14 @@ export default class CustomerRoute extends Route {
 
   async model({ customer_id }) {
     const customer = await this.store.findRecord('customer', customer_id);
-    return Object.entries(customer.attributes);
+    console.log(customer.attributes);
+    console.log(customer.created_at);
+    customer.attributes.created_at = new Date(
+      parseInt(customer.attributes.created_at)
+    ).toISOString();
+    return [
+      ...Object.entries(customer.attributes),
+      ['Last updated', new Date(customer.last_updated).toISOString()],
+    ];
   }
 }
