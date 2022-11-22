@@ -5,6 +5,8 @@ To look at the original problem write-up please look at ./README_PROBLEM.md
 
 To look at progress, check out the merged PULL REQUESTS.
 
+To look at other code challenges, look here: https://github.com/Sleepful/CodingChallenges
+
 # Solution
 
 ## Part 1
