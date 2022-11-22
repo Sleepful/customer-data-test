@@ -1,7 +1,7 @@
 # Summary
 
 This was a takehome test in which I spent around 20 hours and got nothing in return from the entity that sent it to me.
-To look at the original problem write-up please look at ./README_PROBLEM.md
+To look at the original problem write-up please look at [./README_PROBLEM.md](https://github.com/Sleepful/customer-data-test/blob/main/README_PROBLEM.md)
 
 To look at progress, check out the merged PULL REQUESTS.
 
